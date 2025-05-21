@@ -4,7 +4,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Amazon Linux 2 AMI (update as needed)
+  ami           = "ami-0953476d60561c955"  # Amazon Linux 2 AMI (update as needed)
   instance_type = var.instance_type
   subnet_id     = aws_subnet.public.id
   key_name      = aws_key_pair.deployer.key_name
