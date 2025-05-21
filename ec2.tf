@@ -1,6 +1,6 @@
 resource "aws_key_pair" "deployer" {
   key_name   = "deployer-key"
-  public_key = file("/home/ec2-user/.ssh/deployer-key.pub")
+  public_key = file("/deployer-key.pub")
 }
 
 resource "aws_instance" "web" {
